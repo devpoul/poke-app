@@ -1,0 +1,32 @@
+
+.pokedexContainer {
+  background-image: url(https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/animation/ash-ready-for-battle.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+.pokedexHeader {
+  
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.pokedexHeaderText span {
+  color: var(--color-red);
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 120px 0;
+}

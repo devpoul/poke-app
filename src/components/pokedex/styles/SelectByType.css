@@ -1,0 +1,7 @@
+.selectPoke {
+  height: 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: capitalize;
+}

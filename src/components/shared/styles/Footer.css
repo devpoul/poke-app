@@ -1,0 +1,48 @@
+.footerRed {
+  background-color: var(--color-red);
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+
+}
+
+.footerBlack {
+  border-top: 10px solid black;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+}
+
+.footerCircle {
+  width: 80px;
+  aspect-ratio: 1;
+  position: absolute;
+  background-color: black;
+  border-radius: 50%;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footerCircleInt {
+  width: 60px;
+  aspect-ratio: 1;
+  position: absolute;
+  background-color: black;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, 10px);
+  border: 9px solid white;
+  
+}
+
+.footerTitle {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: 5px 15px;
+  z-index: 900;
+}

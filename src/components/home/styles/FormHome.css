@@ -1,0 +1,116 @@
+/* INPUT */
+.pokedexForm {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pokedexInput {
+  width: 150px;
+  border: 3px solid var(--color-blue);
+  background: none;
+  padding: 0.5rem;
+  color: black;
+  box-shadow: -1px 2px 5px #0005;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.pokedexLabel {
+  position: absolute;
+  left: 10%;
+  color: rgba(253, 253, 253, 0);
+  pointer-events: none;
+  transform: translateY(0.5rem);
+  transition: 350ms;
+}
+
+.pokedexInput:focus,
+pokedexInput:valid {
+  outline: none;
+  --angle: 0deg;
+  border-bottom: 3px solid;
+  border-image: conic-gradient(
+      from var(--angle),
+      red,
+      yellow,
+      lime,
+      aqua,
+      blue,
+      magenta,
+      red
+    )
+    1;
+  animation: 2s rotate9234 linear infinite;
+}
+
+@keyframes rotate9234 {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.pokedexInput:focus ~ label,
+pokedexInput:valid ~ label {
+  transform: translateY(235%) scale(1);
+  padding: 0 0.2em;
+  color: var(--color-red);
+  font-weight: 700;
+}
+
+/* BUTTON */
+.pokedexBtn {
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: var(--color-blue);
+  border: solid 4px var(--color-yellow);
+}
+
+.default-btn,
+.hover-btn {
+  background-color: var(--color-blue);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 8px 12px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hover-btn {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-red);
+  transform: translate(0%, 100%);
+}
+
+.default-btn span {
+  color: hsl(0, 0%, 100%);
+}
+
+.hover-btn span {
+  color: hsl(0, 0%, 100%);
+}
+
+.pokedexBtn:hover .default-btn {
+  transform: translate(0%, -100%);
+}
+
+.pokedexBtn:hover .hover-btn {
+  transform: translate(0%, 0%);
+}

@@ -1,0 +1,54 @@
+.formInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.inputSearch {
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #000000;
+  box-shadow: 5px 5px 20px #c5c5c5, -5px -5px 20px #ffffff;
+  transition: 0.3s;
+}
+
+.inputSearch:focus {
+  outline-color: #e8e8e8;
+  background: #e8e8e8;
+  box-shadow: inset 20px 20px 60px #c5c5c5, inset -20px -20px 60px #ffffff;
+  transition: 0.3s;
+}
+
+.formButton {
+  width: 7em;
+  height: 2em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.formButton::before {
+  content: "";
+  width: 0;
+  height: 2em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.formButton:hover::before {
+  width: 9em;
+}
